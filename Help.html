@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact Form</title>
+    <title>Help</title>
     <style>
         body {
             margin: 0;
@@ -33,7 +33,6 @@
             background-color: rgb(192, 236, 204);
         }
 
-        /* Form Styling */
         form {
             margin: 0 auto;
             width: 80%;
@@ -60,7 +59,6 @@
     </style>
 </head>
 <body>
-        <h1 style = "text-align: center;">Contact Page</h1>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -81,12 +79,9 @@
         <textarea id="message" name="message" rows="9" required></textarea>
         <input type="submit" value="Submit">
     </form>
-    <footer>
-        <p>Juniko</p>
-    </footer>
     <script>
        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission
+            event.preventDefault(); 
             if(validateForm()) {
                 window.location.href = "Submit.html"; 
             }
