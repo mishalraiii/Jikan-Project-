@@ -1,0 +1,136 @@
+#myanime {
+    
+    display:inline-block ;
+    margin-left: 85px;
+
+}
+
+#anime {
+
+    float: right;
+    margin-left: 20px; 
+    margin-bottom: 50px;
+
+}
+
+#header {
+
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: hsla(240, 50%, 68%, 0.588);
+    margin-bottom: 50px;
+    box-shadow: 5px 5px hsla(120, 100%, 25%, 0.826) ; 
+    
+    
+}
+
+#head{
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.animes{
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    place-items: center;
+    
+}
+
+img{
+    height: 319px;
+    width: 225px;
+    border: 4px solid hsla(120, 100%, 25%, 0.826);
+    border-radius: 30px;
+    border-style:outset;
+}
+
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    position: relative;
+    background: white;
+    padding: 1em 2em;
+    border-radius: 4px;
+}
+
+.modal:target {
+    display: flex;
+}
+
+#title{
+    min-height: 37px;
+    max-width: 225px;
+    border: 2px solid;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: hsla(240, 50%, 68%, 0.588);
+}
+
+#type{
+    margin-top: 20px;
+    border: 2px solid hsla(120, 100%, 25%, 0.826);
+    border-radius: 20px;
+    padding:5px;
+    color: white;
+    background-color: hsla(0, 88%, 56%, 0.513);
+    height: fit-content;
+    width: fit-content;
+    margin-left: 42%;
+
+    
+}
+
+body{
+
+    background-color: hsla(32, 71%, 75%, 0.258);
+    font-family: Radio Canada Big;
+
+  
+}
+
+strong{
+color: brown;
+font-size: 17px;
+font-weight: bold;
+    
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border: 3px solid hsla(120, 100%, 25%, 0.826);
+    background-color: hsla(0, 74%, 49%, 0.414);
+    padding: 5px;
+    margin: 20px 20px 60px;
+
+
+}
+
+.navbox{
+
+    text-decoration: none;
+    list-style-type: none;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 20px;
+}
+
+.navbox:hover{
+
+    background-color: rgba(152, 152, 152, 0.569);
+}
