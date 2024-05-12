@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Help</title>
+    <title>Help Form</title>
     <style>
         body {
-            margin: 0;
-            background-color: bisque;
+            background-color: hsla(32, 71%, 75%, 0.258);
             font-family: fantasy;
         }
-        
+
+        #header {
+        border: 1px solid;
+        border-radius: 10px;
+        background-color: hsla(240, 50%, 68%, 0.588);
+        margin-bottom: 50px;
+        box-shadow: 5px 5px hsla(120, 100%, 25%, 0.826) ; 
+    }
+
+    #head{
+    margin-left: 20px;
+    color: #ffffff;
+}
+
         nav {
-            text-align:end;
-            color: black;
-            padding: 20px;
-            margin: 10px;
+            display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        border: 3px solid hsla(120, 100%, 25%, 0.826);
+        background-color: hsla(0, 74%, 49%, 0.414);
+        padding: 5px;
+        margin: 20px 20px 60px;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
+        
         nav ul li {
             display: inline;
             margin-right: 20px;
         }
+
         nav ul li a {
-            color: black;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-        nav ul li a:hover {
-            background-color: rgb(192, 236, 204);
+        text-decoration: none;
+        list-style-type: none;
+        padding: 10px 30px;
+        color: white;
+        border-radius: 20px;
         }
 
+        nav ul li a:hover {
+           background-color: rgba(152, 152, 152, 0.569);
+        }
         form {
             margin: 0 auto;
             width: 80%;
@@ -45,7 +59,7 @@
             box-sizing: border-box;
         }
         input[type="submit"] {
-            background-color: rgb(209, 66, 66);
+            background-color: hsla(240, 50%, 68%, 0.588);
             color: white;
             padding: 10px 20px;
             border: none;
@@ -54,16 +68,19 @@
             transition: background-color 0.3s;
         }
         input[type="submit"]:hover {
-            background-color: rgb(212, 143, 143);
+            background-color: rgba(152, 152, 152, 0.569);
         }
     </style>
 </head>
 <body>
+    <div id="header">
+        <h1 id="head"> Contact Us:</h1>
+    </div>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Titles</a></li>
+            <li><a href="jikan.html">Titles</a></li>
             <li><a href="Help.html">Help</a></li>
         </ul>
     </nav>
@@ -81,7 +98,7 @@
     </form>
     <script>
        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); 
+            event.preventDefault(); // Prevent default form submission
             if(validateForm()) {
                 window.location.href = "Submit.html"; 
             }
