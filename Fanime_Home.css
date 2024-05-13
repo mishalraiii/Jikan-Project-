@@ -1,0 +1,62 @@
+body {
+    background-color: hsla(32, 71%, 75%, 0.258);
+    font-family: fantasy;
+}
+
+#heading {
+border: 1px solid;
+border-radius: 10px;
+background-color: hsla(240, 50%, 68%, 0.588);
+margin-bottom: 50px;
+box-shadow: 5px 5px hsla(120, 100%, 25%, 0.826) ; 
+}
+
+#head{
+margin-left: 20px;
+color: #ffffff;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border: 3px solid hsla(120, 100%, 25%, 0.826);
+    background-color: hsla(0, 74%, 49%, 0.414);
+    padding: 5px;
+    margin: 20px 20px 60px;
+}
+
+#nav ul {
+    display: flex;
+    margin-right: 20px;
+}
+
+#nav li {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 20px;
+}
+
+#nav li:hover {
+    background-color: rgba(152, 152, 152, 0.569);
+}
+
+#search-li {
+    float: right; /* Float the search bar to the right */
+}
+
+.animes {
+    display: inline-block;
+    width: calc(25% - 20px); /* Adjust the width as needed */
+    margin: 10px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.top-anime-container {
+    text-align: center;
+    
+}
+
