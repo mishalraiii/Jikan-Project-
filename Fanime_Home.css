@@ -39,6 +39,9 @@ color: #ffffff;
     color: white;
     border-radius: 20px;
 }
+#nav ul li a {
+    color: white; 
+}
 
 #nav li:hover {
     background-color: rgba(152, 152, 152, 0.569);
