@@ -5,6 +5,7 @@ body {
 #header {
     border: 1px solid;
     border-radius: 10px;
+    color: white;
     background-color: hsla(240, 50%, 68%, 0.588);
     margin-bottom: 50px;
     box-shadow: 5px 5px hsla(120, 100%, 25%, 0.826) ; 
@@ -76,6 +77,8 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
+
+
 
