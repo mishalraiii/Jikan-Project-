@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fanime</title>
     <link rel="stylesheet" href="Fanime_Home.css">
 </head>
@@ -19,19 +16,19 @@
             <li><a href="Favorite.html">Favorites</a></li>
         </ul>
     </nav>
-    <h1> Top Anime List:</h1>
+    <h1>Top Anime Shows & Movies:</h1>
     <h2>Top Shows!</h2>
     <div class="slider">
         <div class="slides" id="top-anime-container-tv"></div>
-        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        <button class="prev" onclick="plusSlides(-1, 'tv')">&#10094;</button>
+        <button class="next" onclick="plusSlides(1, 'tv')">&#10095;</button>
     </div>
     
     <h2>Top Movies!</h2>
     <div class="slider">
         <div class="slides" id="top-anime-container-movies"></div>
-        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        <button class="prev" onclick="plusSlides(-1, 'movies')">&#10094;</button>
+        <button class="next" onclick="plusSlides(1, 'movies')">&#10095;</button>
     </div>
 
     <script src="Fanime_Home.js"></script>
