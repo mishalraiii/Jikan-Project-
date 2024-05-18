@@ -1,23 +1,25 @@
 body {
     background-color: hsla(32, 71%, 75%, 0.258);
-    font-family: fantasy;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #heading {
-border: 1px solid;
-border-radius: 10px;
-background-color: hsla(240, 50%, 68%, 0.588);
-margin-bottom: 50px;
-box-shadow: 5px 5px hsla(120, 100%, 25%, 0.826) ; 
+    border: 1px solid;
+    border-radius: 10px;
+    color: white;
+    background-color: hsla(240, 50%, 68%, 0.588);
+    margin-bottom: 50px;
+    box-shadow: 5px 5px hsla(120, 100%, 25%, 0.826);
 }
 
-#head{
-margin-left: 20px;
-color: #ffffff;
+#head {
+    margin-left: 20px;
+    color: #ffffff;
 }
 
 #nav {
     display: flex;
+    color: #ffffff;
     justify-content: center;
     border-radius: 20px;
     border: 3px solid hsla(120, 100%, 25%, 0.826);
@@ -32,11 +34,15 @@ color: #ffffff;
 }
 
 #nav li {
-    text-decoration: none;
     list-style-type: none;
-    padding: 10px 30px;
-    color: white;
     border-radius: 20px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
 }
 
 #nav li:hover {
@@ -44,26 +50,66 @@ color: #ffffff;
 }
 
 #search-li {
-    float: right; /* Float the search bar to the right */
+    float: right;
 }
 
 .animes {
     display: inline-block;
-    width: calc(25% - 20px); /* Adjust the width as needed */
+    width: calc(25% - 20px);
     margin: 10px;
     vertical-align: top;
     text-align: center;
+    font-size: 0.8em; /* Anime box font size */
 }
 
 .top-anime-container {
     text-align: center;
-    
+    margin-bottom: 30px;
 }
 
-.slider-slide {
-    width: 200px;
-    height: 200px;
-    background-size: cover; /* Ensure the background image covers the entire div */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
+/* Slider Styles */
+.slider {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.mySlides {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none; 
+}
+
+.mySlides img {
+    width: 100%;
+    vertical-align: middle;
+    border: 2px solid black;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 35%;
+    z-index: 1;
+    font-size: 0.5em; 
+}
+
+.prev {
+    left: -5px;
+}
+
+.next {
+    right: 600px;;
 }
