@@ -11,6 +11,11 @@ const supabaseUrl = 'https://gzeafpqcujmisocsnzka.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd6ZWFmcHFjdWptaXNvY3NuemthIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4ODc3NjIsImV4cCI6MjAzMTQ2Mzc2Mn0.vuR3HpU6gamo1ONpoaCXzWHNivS6X_rIxCv2_utjS5M'
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey)
 
+app.get('/', (req, res) => {
+    res.sendFile('public/Favorite.html', { root: __dirname });
+});
+ 
+
 app.get('/FavTitles', async (req, res) => {
     console.log('Attempting to GET all FavTitles')
 

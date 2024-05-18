@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FANIME</title>
+    <link rel="stylesheet" href="Favorite.css">
+    <script src="Favorite.js" defer></script>
+</head>
+<body>
+    <header id="header">
+        <h1 id="head">FANIME</h1>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="Fanime_Home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="jikan.html">Titles</a></li>
+            <li><a href="Help.html">Help</a></li>
+            <li><a href="Favorite.html">Favorites</a></li>
+        </ul>
+    </nav>
+    <h1>Tell Us Your Favorite Title!</h1>
+    <form onsubmit="createTitle(); return false;">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" required>
+
+        <label for="favtitle">Favorite Title:</label>
+        <input type="text" id="favtitle" required>
+        <br><br>
+        <input type="submit" value="Submit">
+        <hr>
+    </form>
+    <div id="table-container"></div>
+
+</body>
+</html>

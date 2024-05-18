@@ -12,7 +12,9 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.43.2",
     "body-parser": "^1.20.2",
+    "espress": "^0.0.0",
     "express": "^4.19.2",
+    "latest": "^0.2.0",
     "nodemon": "^3.1.0"
   }
 }
