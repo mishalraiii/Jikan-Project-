@@ -20,7 +20,7 @@ async function fetchTopAiringAnimeTV() {
         data.data.forEach(anime => {
             displayAnime(anime, containerTV);
         });
-        showSlides(1);
+        showSlides(1, 'tv');
     } catch (error) {
         console.error(error);
     }
@@ -43,7 +43,7 @@ async function fetchTopAiringAnimeMovies() {
         data.data.forEach(anime => {
             displayAnime(anime, containerMovies);
         });
-        showSlides(1);
+        showSlides(1, 'movies');
     } catch (error) {
         console.error(error);
     }
@@ -85,20 +85,19 @@ function displayAnime(anime, container) {
     container.appendChild(slide);
 }
 
-let slideIndex = 1;
+let slideIndex = { 'tv': 1, 'movies': 1 };
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function plusSlides(n, sliderType) {
+    showSlides(slideIndex[sliderType] += n, sliderType);
 }
 
-function showSlides(n) {
+function showSlides(n, sliderType) {
     let i;
-    const slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
+    const slides = document.querySelectorAll(`#top-anime-container-${sliderType} .mySlides`);
+    if (n > slides.length) { slideIndex[sliderType] = 1 }
+    if (n < 1) { slideIndex[sliderType] = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex[sliderType] - 1].style.display = "block";
 }
-
