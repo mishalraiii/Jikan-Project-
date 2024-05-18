@@ -1,37 +1,39 @@
-<html>
-    <head>
-        <title>Fanime</title>
-        <link rel = "stylesheet" href = "Fanime_Home.css">
-        <script src="Fanime_Home.js" ></script>
-        
-       
-    </head>
-    <body>
-        <header id="heading">
-            <h1 id = "head">FANIME</h1>
-        </header>
-        <nav id="nav">
-            <ul>
-                <li><a href="Fanime_Home.html">Home</a></li>
-                <li><a href="about.html" style="text-decoration:none;">About</a></li>
-                <li><a href="jikan.html" style="text-decoration: none;">Titles</a></li>
-                <li><a href="Help.html" style="text-decoration: none;">Help</a></li>
-                <li><a href="Favorite.html">Favorites</a></li>
-                
-            </ul>
-        </nav>
-        
-        <h1>Top Anime Right Now!</h1>
-        <h2>Top shows!</h2>
-        <div class="top-anime-container" id="top-anime-container-tv"></div>
-        <h2>Top Movies!</h2>
-        <div class="top-anime-container" id="top-anime-container-movies"></div>
-        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanime</title>
+    <link rel="stylesheet" href="Fanime_Home.css">
+</head>
+<body>
+    <header id="heading">
+        <h1 id="head">FANIME</h1>
+    </header>
+    <nav id="nav">
+        <ul>
+            <li><a href="Fanime_Home.html">Home</a></li>
+            <li><a href="about.html" style="text-decoration:none;">About</a></li>
+            <li><a href="jikan.html" style="text-decoration: none;">Titles</a></li>
+            <li><a href="Help.html" style="text-decoration: none;">Help</a></li>
+            <li><a href="Favorite.html">Favorites</a></li>
+        </ul>
+    </nav>
+    <h1> Top Anime List:</h1>
+    <h2>Top Shows!</h2>
+    <div class="slider">
+        <div class="slides" id="top-anime-container-tv"></div>
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+    
+    <h2>Top Movies!</h2>
+    <div class="slider">
+        <div class="slides" id="top-anime-container-movies"></div>
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
 
-
-
-
-
-    </body>
-
+    <script src="Fanime_Home.js"></script>
+</body>
 </html>
