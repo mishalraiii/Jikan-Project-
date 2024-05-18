@@ -1,14 +1,7 @@
-function callAPI(){
-    fetch('/',{
-        method:'POST'
-    })
-    .then((res) => res.json())
-    .then((res) => {
-        console.log(res)
-    })
-}
-window.onload = callAPI;
-
+document.addEventListener("DOMContentLoaded", function () {
+    fetchTopAiringAnimeTV();
+    fetchTopAiringAnimeMovies();
+});
 
 async function fetchTopAiringAnimeTV() {
     try {
@@ -27,6 +20,7 @@ async function fetchTopAiringAnimeTV() {
         data.data.forEach(anime => {
             displayAnime(anime, containerTV);
         });
+        showSlides(1);
     } catch (error) {
         console.error(error);
     }
@@ -49,55 +43,62 @@ async function fetchTopAiringAnimeMovies() {
         data.data.forEach(anime => {
             displayAnime(anime, containerMovies);
         });
+        showSlides(1);
     } catch (error) {
         console.error(error);
     }
 }
 
 function displayAnime(anime, container) {
-    // Create the box div
+    const slide = document.createElement("div");
+    slide.className = "mySlides";
+
     const box = document.createElement("div");
     box.className = "animes";
 
-    // Set the title and image
     const title = document.createElement("p");
     title.textContent = anime.title;
     title.className = "anime-title";
 
-    // Check if anime.score is not null or undefined before calling toFixed method
     const rating = document.createElement("p");
-    if (anime.score !== null && anime.score !== undefined) {
-        rating.textContent = "Rating: " + anime.score.toFixed(1); // Assuming the score is provided as a float
-    } else {
-        rating.textContent = "Rating: N/A";
-    }
+    rating.textContent = anime.score !== null && anime.score !== undefined ? "Rating: " + anime.score.toFixed(1) : "Rating: N/A";
 
     const genre = document.createElement("p");
     genre.textContent = "Genre: " + anime.genres.map(genre => genre.name).join(', ');
 
-    // Create the anchor tag inside the box
     const anchor = document.createElement("a");
-    anchor.href = "#popup-box-" + anime.rank; // Unique ID for each popup box
+    anchor.href = "#popup-box-" + anime.rank;
 
     const img = document.createElement("img");
     img.src = anime.images.jpg.image_url;
     img.id = "anime";
-
     img.style.border = "2px solid black";
 
     anchor.appendChild(img);
 
-    // Append elements to the box
     box.appendChild(anchor);
     box.appendChild(title);
     box.appendChild(rating);
     box.appendChild(genre);
+    slide.appendChild(box);
 
-    // Append the box to the container
-    container.appendChild(box);
+    container.appendChild(slide);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    fetchTopAiringAnimeTV();
-    fetchTopAiringAnimeMovies();
-});
+let slideIndex = 1;
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
