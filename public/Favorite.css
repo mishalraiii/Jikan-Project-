@@ -41,3 +41,9 @@ color: #ffffff;
     display: inline-block;
     padding: 10px;
 }
+#main-nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
