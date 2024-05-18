@@ -1,3 +1,17 @@
+function callAPI(){
+    fetch('/',{
+        method:'POST'
+    })
+    .then((res) => res.json())
+    .then((res) => {
+        console.log(res)
+    })
+}
+window.onload = callAPI;
+
+
+
+
 async function fetchTopAiringAnimeTV() {
     try {
         const response = await fetch('https://api.jikan.moe/v4/top/anime?type=tv&filter=airing&sfw=true&limit=4');

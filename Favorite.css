@@ -1,0 +1,43 @@
+body {
+    background-color: hsla(32, 71%, 75%, 0.258);
+    font-family: fantasy;}
+
+#header {
+    border: 1px solid;
+    border-radius: 10px;
+    color: white;
+    background-color: hsla(240, 50%, 68%, 0.588);
+    margin-bottom: 50px;
+    box-shadow: 5px 5px hsla(120, 100%, 25%, 0.826) ; 
+}
+
+#head{
+margin-left: 20px;
+color: #ffffff;
+}
+
+#main-nav {
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    border-radius: 20px;
+    border: 3px solid hsla(120, 100%, 25%, 0.826);
+    background-color: hsla(0, 74%, 49%, 0.414);
+    padding: 5px;
+    margin: 20px 20px 60px;
+}
+
+#main-nav li:hover {
+        background-color: rgba(152, 152, 152, 0.569);
+}
+
+#main-nav li {
+    display: inline-block;
+    position: relative;
+}
+
+#main-nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
