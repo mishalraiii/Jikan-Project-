@@ -8,3 +8,4 @@ Our project aims to utilize data from an API containing comprehensive informatio
 This website was designed for individuals who love or appreciate anime, or those who are interested in learning more about specific anime shows. Whether you are a seasoned fan or new to the genre, AnimeHub provides a wealth of information and resources to enhance your anime experience. Consequently, this website is intended for everyone, ensuring that any and all browsers will have access to AnimeHub.
 
 ### Link to Developer Manual
+Developer Manual is in the docs folder
